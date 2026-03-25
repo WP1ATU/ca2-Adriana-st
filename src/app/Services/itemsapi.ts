@@ -1,13 +1,18 @@
 import { inject, Injectable, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Cars } from '../Models/interface';
+import { environment } from '../../environments/environment';
 
 @Injectable({ 
   providedIn: 'root' 
 })
 export class Itemsapi {
   public items = signal<Cars[]>([]);
-  private _apiUrl = 'http://localhost:5050/cars';
+  // private _apiUrl = 'http://localhost:5050/cars';
+  private _apiUrl = environment.apiUrl;
+  
+  
+
   private _http = inject(HttpClient);
 
   getItems() {
