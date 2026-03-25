@@ -1,0 +1,72 @@
+
+<div class="card shadow-sm mb-4">
+  <div class="card-header bg-dark text-white">
+    <h5 class="mb-0"><i class="bi bi-plus-circle me-2"></i>Add a New Car</h5>
+  </div>
+  <div class="card-body">
+    <form (ngSubmit)="addItem()">
+      <div class="row g-3">
+
+        <div class="col-md-6">
+          <label for="make" class="form-label fw-semibold">Make</label>
+          <input
+            type="text"
+            id="make"
+            class="form-control"
+            placeholder="e.g. Toyota"
+            [(ngModel)]="make"
+            name="make"
+            required
+          />
+        </div>
+
+        <div class="col-md-6">
+          <label for="model" class="form-label fw-semibold">Model</label>
+          <input
+            type="text"
+            id="model"
+            class="form-control"
+            placeholder="e.g. Corolla"
+            [(ngModel)]="model"
+            name="model"
+            required
+          />
+        </div>
+
+        <div class="col-md-4">
+          <label for="year" class="form-label fw-semibold">Year</label>
+          <input
+            type="text"
+            id="year"
+            class="form-control"
+            placeholder="e.g. 2022"
+            [(ngModel)]="year"
+            name="year"
+            required
+          />
+        </div>
+
+        <div class="col-md-8">
+          <label for="image" class="form-label fw-semibold">
+            Image URL <span class="text-muted fw-normal">(optional)</span>
+          </label>
+          <input
+            type="text"
+            id="image"
+            class="form-control"
+            placeholder="https://example.com/car.jpg"
+            [(ngModel)]="image"
+            name="image"
+          />
+        </div>
+
+        <div class="col-12">
+          <button type="submit" class="btn btn-dark">
+            <i class="bi bi-plus-lg me-1"></i>Add Car
+          </button>
+        </div>
+
+      </div>
+    </form>
+  </div>
+</div>

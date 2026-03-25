@@ -1,8 +1,41 @@
 
 
-<main class="main">  
-  <h1>Hello, {{ title() }}</h1>
-  <p>Congratulations! Your app is running. 🎉</p> 
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold" routerLink="/"> Car Collection</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navMenu"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >Home</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/about"
+            routerLinkActive="active"
+          >About</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <main class="main container py-4">  
+  <h1>{{ title() }}</h1>
+  <p>Implemented by Adriana Prepeshniuk <strong>S00273868</strong></p>
+  
 </main>
 
 
